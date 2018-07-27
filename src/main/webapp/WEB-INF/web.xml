@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright  1995-2014 PharmApps, LLC.
+All Rights Reserved.
+This software is the confidential and proprietary information of PharmaSystems, Inc. ("Confidential Information").
+Author      : Ankur N Heble, Ashley Rajiv Mathad : Employed By ArisGlobal Software Pvt. Ltd.
+Created On  : 20-Oct-2015
+Description : This file acts a web deployment descriptor configuration file. -->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <welcome-file-list>
+ <welcome-file>resources/pages/common/login.jsp</welcome-file>
+ </welcome-file-list>
+ <servlet>
+    <servlet-name>spring</servlet-name>
+    <servlet-class>
+      org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+ </web-app>
